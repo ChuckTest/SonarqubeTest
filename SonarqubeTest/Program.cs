@@ -15,6 +15,15 @@ namespace SonarqubeTest
             {
                 Console.WriteLine(false);
             }
+
+            if (CustomHelper.MandatoryFields2.Contains(fieldName))
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
         }
     }
 }

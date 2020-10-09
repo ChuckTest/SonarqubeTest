@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SonarqubeTest
 {
@@ -10,6 +6,15 @@ namespace SonarqubeTest
     {
         static void Main(string[] args)
         {
+            var fieldName = "First name";
+            if (CustomHelper.MandatoryFields.Contains(fieldName))
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
         }
     }
 }

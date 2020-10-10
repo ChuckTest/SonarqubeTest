@@ -2,7 +2,7 @@
 
 namespace SonarqubeTest
 {
-    public static class CustomHelper
+    public class CustomHelper
     {
         public static List<string> MandatoryFields = new List<string>
         {

@@ -10,4 +10,18 @@ namespace SonarqubeTest
             "Last name"
         };
     }
+
+    public class Math
+    {
+        public static double Pi = 3.14;
+    }
+
+    public class Shape
+    {
+        public static Shape Empty = new EmptyShape();
+
+        private class EmptyShape : Shape
+        {
+        }
+    }
 }

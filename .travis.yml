@@ -1,8 +1,14 @@
+language: csharp
+mono: latest
+
 addons:
   sonarcloud:
     organization: "chucktest" # the key of the org you chose at step #3
     token:
       secure: "pC/fyUIM/tCv8Z1x7JtRLaA4AT7KdfDz37CkRP5kYWrAo6Z+DkIrfgaK5dYJO117Xtt4iqULOLk8hqtGoPy/KEltuaLiC97LGBMMMqPFJPw9OJf9QCAWLQIMsErd8pPdIGgkkw1exnXTtaJPkUlX2JV0Yd5cjOJv1TIdgRkA8r8Q0n5uSDK+KyE4nyIUQWuks6x5NBjasgl232xiItBm6HWkApvYVMUNhqW/lgQ3n4gPt2BTYPN+WbGFHE3WjLNIxGFMgRbMpgqIWNlezFN7j0PUQRE+vOnbrklQj980ON5FiTRg45S4bvreF9OqaXPXAdRT0lLuEdXa+ye/XFBqDX5wI7UX5JIr4KwqmCTbLtHWyEOHn+ZijmfaLRiu2gZ6AVCDUUlVmJq4fE41zAjjhw6WOsudoOUrJ44rnF03/XLxZzfCkynmLUKyWYX12GHb462dp/KQlInmckGjzCSnhF4wO4a/FT9Z1UxjEiZIZBKty/C0jX4JRt/3WPdfxayWOk6pnTgqOk4b33+YiWKH/lBCqToj0JCqmhBY0q6NQHJj19nlWZsh0wRfqO2r8ZSLnGV0rsGqEUWYNQGUUC6vJN5wJcPxNn4J4G9PenAUmIi+b8mH5Ic/slQB53Yv6nP2/5Kwh24sCp1Ns6SX6RwwNYidliYyT0uefim3V1s3huY=" # encrypted value of your token
+      
+before_install:
+- bash ./tools/travis-ci-install-sonar.sh
+
 script:
-  # other script steps might be done before running the actual analysis
-  - sonar-scanner
+ - bash ./tools/travis-ci-build.sh

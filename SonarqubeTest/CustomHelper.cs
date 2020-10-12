@@ -11,7 +11,7 @@ namespace SonarqubeTest
         };
     }
 
-    public class Math
+    public static class Math
     {
         public static double Pi = 3.14;
     }

@@ -9,6 +9,15 @@ namespace SonarqubeTest
             try
             {
                 Console.WriteLine("Hello world.");
+
+                foreach (var item in CustomHelper.MandatoryFields)
+                {
+                    Console.WriteLine(item);
+                }
+
+                Console.WriteLine(Math.Pi);
+
+                Console.WriteLine(Shape.Empty.GetHashCode());
             }
             catch (Exception ex)
             {

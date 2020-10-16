@@ -1,16 +1,77 @@
-﻿namespace Chuck.Sonarqube
+﻿using System;
+using Newtonsoft.Json;
+
+namespace Chuck.Sonarqube
 {
-    public class CrossProcedural
+    public class FormConfigurationDetail
     {
-        private int myValue;
-        public int MyValue
+
+    }
+
+    public class CustomHelper
+    {
+        private string _formDetail;
+        public string FormDetail
         {
-            // below there are two False Positives
-            get => this.GetMyValue();
-            set => this.SetMyValue(value);
+            get
+            {
+                if (!string.IsNullOrEmpty(_formDetail))
+                {
+                    return _formDetail;
+                }
+
+                if (FormConfigurationDetail != null)
+                {
+                    _formDetail = JsonConvert.SerializeObject(FormConfigurationDetail);
+                }
+
+                return _formDetail;
+            }
+            set
+            {
+                SetFormConfigurationDetail(value);
+            }
         }
 
-        private int GetMyValue() => this.myValue;
-        private void SetMyValue(int value) => this.myValue = value;
+        private FormConfigurationDetail _formConfigurationDetail;
+        public FormConfigurationDetail FormConfigurationDetail
+        {
+            get
+            {
+                if (_formConfigurationDetail != null)
+                {
+                    return _formConfigurationDetail;
+                }
+                if (!string.IsNullOrEmpty(FormDetail))
+                {
+                    _formConfigurationDetail = JsonConvert.DeserializeObject<FormConfigurationDetail>(FormDetail);
+                }
+                return _formConfigurationDetail;
+            }
+            set
+            {
+                SetFormConfigurationDetail(value);
+            }
+        }
+
+        private void SetFormConfigurationDetail(FormConfigurationDetail formConfigurationDetail)
+        {
+            if (formConfigurationDetail == null)
+            {
+                throw new ArgumentNullException(nameof(formConfigurationDetail));
+            }
+
+            _formConfigurationDetail = formConfigurationDetail;
+        }
+
+        private void SetFormConfigurationDetail(string formConfigurationDetail)
+        {
+            if (string.IsNullOrEmpty(formConfigurationDetail))
+            {
+                return;
+            }
+            SetFormConfigurationDetail(JsonConvert.DeserializeObject<FormConfigurationDetail>(formConfigurationDetail));
+            _formDetail = formConfigurationDetail;
+        }
     }
 }

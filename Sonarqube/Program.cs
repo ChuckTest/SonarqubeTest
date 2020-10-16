@@ -9,12 +9,6 @@ namespace Chuck.Sonarqube
             try
             {
                 Console.WriteLine("Hello world.");
-
-                foreach (var item in CustomHelper.MandatoryFields)
-                {
-                    Console.WriteLine(item);
-                }
-
             }
             catch (Exception ex)
             {

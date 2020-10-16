@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C23FD1ED-9FE5-421D-8CFD-8C3C41A74224}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SonarqubeTest</RootNamespace>
-    <AssemblyName>SonarqubeTest</AssemblyName>
+    <RootNamespace>Chuck.Sonarqube</RootNamespace>
+    <AssemblyName>Chuck.Sonarqube</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

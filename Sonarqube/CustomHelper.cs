@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SonarqubeTest
+namespace Chuck.Sonarqube
 {
     public static class CustomHelper
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SonarqubeTest
+namespace Chuck.Sonarqube
 {
     public static class Program
     {

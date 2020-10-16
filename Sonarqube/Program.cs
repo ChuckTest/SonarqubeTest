@@ -15,9 +15,6 @@ namespace Chuck.Sonarqube
                     Console.WriteLine(item);
                 }
 
-                Console.WriteLine(Math.Pi);
-
-                Console.WriteLine(Shape.Empty.GetHashCode());
             }
             catch (Exception ex)
             {

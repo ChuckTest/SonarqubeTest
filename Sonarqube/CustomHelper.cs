@@ -6,8 +6,8 @@
         public int MyValue
         {
             // below there are two False Positives
-            get => this.GetMyValue(); // Noncompliant {{Refactor this getter so that it actually refers to the field 'myValue'.}}
-            set => this.SetMyValue(value); // Noncompliant {{Refactor this setter so that it actually refers to the field 'myValue'.}}
+            get => this.GetMyValue();
+            set => this.SetMyValue(value);
         }
 
         private int GetMyValue() => this.myValue;

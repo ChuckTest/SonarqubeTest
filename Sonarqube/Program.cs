@@ -8,7 +8,7 @@ namespace Chuck.Sonarqube
         {
             try
             {
-                Console.WriteLine("Hello world.");
+                Console.WriteLine("Hello chuck.");
             }
             catch (Exception ex)
             {
